@@ -1,0 +1,119 @@
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .logo {
+        color: green;
+        padding-right: 50px;
+    }
+    body {
+        max-width: 990px;
+    }
+    .team-member {
+        width: 270px;
+        height: 270px;
+    }
+    #tour {
+        display: flex;
+        flex-direction: column;
+    }
+    #tour .title {
+        display: none;
+    }
+    #tour img {
+        width: 900px;
+        padding-bottom: 100px; /**/
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .logo {
+        color: yellow;
+        padding-right: 50px;
+    }
+    body {
+        max-width: 760px;
+    }
+    .main a::after {
+        display: none;
+    }
+    #iframe-container {
+        right: 20px;
+        width: 40%;
+        height: 60%;
+    }
+    .team-member {
+        width: 230px;
+        height: 230px;
+        margin: 10px;
+    }
+    #tour {
+        display: flex;
+        flex-direction: column;
+    }
+    #tour .title {
+        display: none;
+    }
+    #tour img {
+        width: 740px;
+        margin-left: 0;
+        padding-bottom: 100px; /**/
+    }
+
+}
+
+@media only screen and (min-width:480px) and (max-width: 767px) {
+    .logo {
+        color: darkmagenta;
+        padding-right: 50px;
+    }
+    body {
+        max-width: 480px;
+    }
+    header{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;        
+        justify-content:center;
+        align-items: start;
+    }
+    .header {
+        font-size: 30px;
+        display: flex;
+    }
+    .main a::after {
+        display: none;
+    }
+    #iframe-container {
+        top: 1200px;
+        right: 50px;
+        width: 60%;
+        height: 20%;
+        
+    }
+    #tour {
+        display: flex;
+        flex-direction: column;
+    }
+    #tour .title {
+        display: none;
+    }
+    #tour img {
+        width: 480px;
+        margin-left: 20px;
+        padding-bottom: 100px; /**/
+    }
+
+
+}
+@media only  screen and (min-width:320px)and (max-width: 479px) {
+    .logo {
+        color: chartreuse;
+        padding-right: 50px;
+    }
+    
+    body {
+
+        max-width: 300px;
+    }
+} 

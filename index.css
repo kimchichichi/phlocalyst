@@ -1,0 +1,337 @@
+:root {
+    --main-color: #FEFDF8;
+    --secondary-color: #2263E7;
+    --extra-color:#a2a2c1;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+*::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+html {
+	font-family: Helvetica;
+	scroll-behavior: smooth;
+}
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}  
+a:hover {
+    font-style: italic;
+    color: var(--extra-color);
+}
+span {
+    color: var(--extra-color);
+}
+body {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    height:auto;
+}
+header {
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 40px;
+    letter-spacing: 0.1rem;
+}
+.logo :hover {
+    color: var(--secondary-color);
+}
+.logo p {
+    font-size: 15px;
+    letter-spacing: normal;
+}
+.index {
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 0.1rem;
+    font-weight: lighter;
+    font-size: 15px;
+}
+.index ul {
+    padding:20px;
+}
+
+.header {
+    font-size: 50px;
+}
+.header .copyright {
+    font-size: 15px;
+    text-align: right;
+    letter-spacing: 0.1rem;
+    font-weight: lighter;
+}
+   
+main {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+main::after {
+    content: ""; /* Create an empty content for the ::after pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the entire body */
+    height: 100%;
+    z-index: -1; /* Place it behind the content */
+    opacity: 0.2; /* Opacity of the background image */
+    background-size: cover; /* This property ensures that the background image covers the entire element */
+    background-repeat: no-repeat; 
+}
+main p {
+    font-size: 15px;
+}
+.main {
+    width: 50%;
+    height: 270px;
+    padding-top: 10px;
+    padding-left: 15px;
+    font-size: 70px;
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
+    border-top: solid 2px var(--secondary-color);
+    position: relative; 
+}
+
+.main:not(:nth-child(2)):not(:nth-child(4)):before {
+    content: ''; /* Adding a pseudo-element for spacing */
+    position: absolute;
+    top: 20px; /* Adjust top spacing as needed */
+    bottom: 20px; /* Adjust bottom spacing as needed */
+    right: 0;
+    width: 2px;
+    background-color: var(--secondary-color);
+}
+.main a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    display: inline-block;
+    position: relative; /* Added for positioning */
+    transition: transform 0.3s;
+}
+.main a:hover {
+    color: var(--second-color);
+    transform: skewX(15deg); 
+    font-style: italic; 
+}
+.main a::after {
+    content: '\2192'; /* Unicode character for right arrow */
+    position: absolute;
+    top: 50%;
+    right: -100px; /* Adjust distance from text */
+    transform: translateY(-50%) scale(0); /* Initially hidden */
+    color: rgba(240, 248, 255, 0.5); /* Adjust arrow color */
+    font-family: "Font Awesome"; /* Assuming you're using Font Awesome for icons */
+    z-index: -1;
+    transition: transform 0.3s ease, color 0.3s ease; /* Added transition for smooth animation */
+}
+
+.main a:hover::after {
+    transform: translateY(-50%) scale(1); /* Show arrow on hover */
+    color: var(--secondary-color);
+}
+
+
+.title{
+    writing-mode: vertical-lr; 
+    text-orientation: mixed; 
+    transform: rotate(180deg);
+    font-size: 80px;
+    text-transform: uppercase;
+    margin-right: 50px;
+    margin-bottom: 50px; /**/
+}
+
+section {
+    padding-bottom: 100px;
+}
+/* new */
+#new {
+    display: flex;
+    flex-direction: column;
+
+}
+#new .new {
+    padding: 20px;
+}
+/* about */
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+    height: auto;
+    justify-content: center;
+}
+#about h2 {
+    font-size: 22px;
+    margin: 30px;
+}
+.team-member {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px;
+    border: 10px solid var(--secondary-color);
+}
+
+.team-member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: opacity 0.3s ease;
+}
+
+.team-member:hover img {
+    opacity: 0.7; 
+}
+
+.team-member::after {
+    content: attr(alt);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-member:hover::after {
+    opacity: 1;
+}
+
+.section {
+    width: 100%;
+	height: 100vh;
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.section ul li {
+    border-bottom: 2px solid var(--secondary-color);
+    padding: 20px;
+    padding-bottom: 20px;
+}
+.section ul li:last-child {
+    border-bottom: none;
+}
+/* tour */
+.uhr {
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+.datum {
+    font-size: 3rem;
+}
+
+#tour img {
+    width: 600px;
+    margin-left: 40px;
+    padding-bottom: 50px; /**/
+}
+
+/* listen */
+#listen li:hover {
+    cursor: pointer;
+    color: var(--extra-color);
+}
+#listen ul li:last-child {
+    padding-bottom: 100px;
+}
+#iframe-container {
+    position: absolute;
+    top: 400px;
+    right: 50px;
+    width: 50%;
+    height: 50%;
+    border: 10px solid var(--secondary-color);
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: var(--extra-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* galerie */
+#galerie {
+    height: auto;
+}
+.galerie img {
+    width: 320px;
+}
+
+.galerie .group {
+    width:970px;
+}
+.galerie img:hover {
+    cursor: pointer;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with opacity */
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+}
+.modal-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.footer {
+    font-weight: lighter;
+    font-size: 15px;
+    padding: 20px;
+    display: inline-flex;
+}
